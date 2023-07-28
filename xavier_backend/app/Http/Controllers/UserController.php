@@ -12,9 +12,12 @@ class UserController extends Controller
         if($user && $req->password===$user->password){
         return $user;
         }else{
-            return response([
-                "data"=>[ 'password dont Match']
-        ]    ) ;
+        //     return response([
+        //         "data"=>[ 'password dont Match']
+        // ]    ) ;
+        return response([                   
+            "username"=>'password dont match'               
+    ]    ) ;
         }
     }
      
